@@ -27,7 +27,7 @@
   <li>Apply model</li>
 </ul>
 
-<h1 style="text-align:center; font-size:100px; color:#BC3232">Conclusion</h1>
+# Conclusion
 
 - The data contain 16% of customers who have churned so the data is imbalanced
 - The proportion of gender count is almos the same (52.9% Male and 47.1% Female)
