@@ -27,3 +27,19 @@
   <li>Apply model</li>
 </ul>
 
+# Conclusion 
+
+- The data contain 16% of customers who have churned so the data is imbalanced
+- The proportion of gender count is almos the same (52.9% Male and 47.1% Female)
+- Female who have churned are more than male
+- Married presons and single almost same as in number of leaving our service.
+- Graduate clients are the most type leave our service.
+- People with income less than $ 40k are the most category of leaving service.
+- People with card type Blue are the most type of leaving service.
+- People with dependent count equal 3 are the most of leaveing service
+- Most people leave our service after 36 months
+- Most people who stay inactive for 3 months leave our service
+- Lower credit limit means high probability to leave service
+- Lower open to buy mean high probability to leave service
+- People with 2700 and less Transaction Amount about half of them leave our service
+- More than half of people who never use card leave service
