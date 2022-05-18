@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Predict the price of books</title>
+    <title>Bank Churners</title>
 
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400" rel="stylesheet">
@@ -24,7 +24,8 @@
             <div class="container">
                 <div class="row">
                     <div class="booking-form">
-                        <div style="color: white; font-size: 25px;; text-align: center;">This app to predict if the client will leave our service or not</div>
+                        <div style="color: white; font-size: 30px; text-align: center;">This app to predict if the
+                            client will leave our service or not</div>
                         <form action="/predict" method="GET">
                             <div class="form-group">
                             </div>
@@ -32,7 +33,7 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <span class="form-label">Age</span>
-                                        <input class="form-control" type="Number" placeholder="Age" name="age" required>
+                                        <input class="form-control" type="Number" placeholder="Age" name="age" min="18" required>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -73,7 +74,8 @@
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <span class="form-label">Number of dependent</span>
-                                        <input class="form-control" type="Number" placeholder="Number of dependent" name="Dependent_count" required>
+                                        <input class="form-control" type="Number" placeholder="Count"
+                                            name="Dependent_count" min="0" required>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
@@ -101,81 +103,91 @@
                                         <span class="select-arrow"></span>
                                     </div>
                                 </div>
-                                
-                                
                             </div>
-                            
+
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <span class="form-label">How many months in our service</span>
-                                        <input class="form-control" type="number" placeholder="Number of Months" name="Months_on_book" min=0 required>
+                                        <input class="form-control" type="number" placeholder="Count"
+                                            name="Months_on_book" min="0" required>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <span class="form-label">Total no. of products held by the customer</span>
-                                        <input class="form-control" type="number" placeholder="hour" name="Total_Relationship_Count" min=0 required>
+                                        <span class="form-label">Total no. of products held by customer</span>
+                                        <input class="form-control" type="number" placeholder="Count"
+                                            name="Total_Relationship_Count" min="0" required>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <span class="form-label">No. of months inactive</span>
-                                        <input class="form-control" type="number" placeholder="Number of Months" name="Months_Inactive_12_mon" min=0  required>
+                                        <input class="form-control" type="number" placeholder="Count"
+                                            name="Months_Inactive_12_mon" min="0" required>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <span class="form-label">No. of Contacts</span>
-                                        <input class="form-control" type="number" placeholder="Number of contacts" name="Contacts_Count_12_mon" min=0 required>
+                                        <input class="form-control" type="number" placeholder="Count"
+                                            name="Contacts_Count_12_mon" min="0" required>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <span class="form-label">Credit Limit on the Credit Card</span>
-                                        <input class="form-control" type="number" placeholder="Crdit limit" name="Credit_Limit" min=0 required>
+                                        <span class="form-label">Credit Limit on Card</span>
+                                        <input class="form-control" type="number" placeholder="Amount"
+                                            name="Credit_Limit" min="0.0" step="any" required>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <span class="form-label">Total Revolving Balance on the Credit Card</span>
-                                        <input class="form-control" type="number" placeholder="Total Revolving Balance" name="Total_Revolving_Bal" min=0 required>
+                                        <span class="form-label">Revolving Balance on Card</span>
+                                        <input class="form-control" type="number" placeholder="Amount"
+                                            name="Total_Revolving_Bal" min="0" step="any" required>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <span class="form-label">Open to Buy Credit Line (Average)</span>
-                                        <input class="form-control" type="number" placeholder="Average" name="Avg_Open_To_Buy" min=0 required>
+                                        <span class="form-label">Open to Buy Credit Line</span>
+                                        <input class="form-control" type="number" placeholder="Average"
+                                            name="Avg_Open_To_Buy" min="0" step="any" required>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-4">
                                     <div class="form-group">
                                         <span class="form-label">Change in Transaction Amount</span>
-                                        <input class="form-control" type="number" placeholder="Amount" name="Total_Amt_Chng_Q4_Q1" min=0 required>
+                                        <input class="form-control" type="number" placeholder="Amount"
+                                            name="Total_Amt_Chng_Q4_Q1" min="0" step="any" required>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-4">
                                     <div class="form-group">
                                         <span class="form-label">Total Transaction Amount</span>
-                                        <input class="form-control" type="number" placeholder="Total Transaction Amount" name="Total_Trans_Amt" min=0 required>
+                                        <input class="form-control" type="number" placeholder="Amount"
+                                            name="Total_Trans_Amt" min="0" step="any" required>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-4">
                                     <div class="form-group">
                                         <span class="form-label">Total Transaction Count</span>
-                                        <input class="form-control" type="number" placeholder="Total Transaction Count" name="Total_Trans_Ct" min=0 required>
+                                        <input class="form-control" type="number" placeholder="Count"
+                                            name="Total_Trans_Ct" min="0" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <span class="form-label">Change in Transaction Count</span>
-                                        <input class="form-control" type="number" placeholder="Change" name="Total_Ct_Chng_Q4_Q1" min=0 required>
+                                        <input class="form-control" type="number" placeholder="Count"
+                                            name="Total_Ct_Chng_Q4_Q1" min="0" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <span class="form-label">Average Card Utilization Ratio</span>
-                                        <input class="form-control" type="number" placeholder="Average" name="Avg_Utilization_Ratio" min=0 required>
+                                        <input class="form-control" type="number" placeholder="Average"
+                                            name="Avg_Utilization_Ratio" min="0.0" step="any" required>
                                     </div>
                                 </div>
                             </div>
@@ -183,7 +195,8 @@
                                 <div class="col-md-4"></div>
                                 <div class="col-md-4">
                                     <div class="form-btn">
-                                        <button type="submit" class="submit-btn" style="font-size: larger;">Predict</button>
+                                        <button type="submit" class="submit-btn"
+                                            style="font-size: larger;">Predict</button>
                                     </div>
                                 </div>
                             </div>
@@ -191,7 +204,8 @@
                         <hr>
 
                         {% if prediction %}
-                            <h3 style="text-align: center; color: white;">The Client will <span style="color:#f23e3e; font-size:xx-large;">{{ prediction }}</span></h3>
+                        <h3 style="text-align: center; color: white;">The Client will <span
+                                style="color:#f23e3e; font-size:xx-large;">{{ prediction }}</span></h3>
                         {% endif %}
 
                     </div>
@@ -199,7 +213,6 @@
             </div>
         </div>
     </div>
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</body>
 
 </html>
-
